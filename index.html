@@ -4,28 +4,85 @@
     <meta charset="UTF-8">
     <title>TapBox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+      /* --- FOND ANIMÉ --- */
       body {
-        background: #
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at center, #00111f, #000000 80%);
+        overflow: hidden;
         font-family: system-ui, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-      }
-      button {
-        font-size: 20px;
-        padding: 15px 25px;
-        margin: 10px;
-        border-radius: 12px;
-        border: none;
-        background: #222;
         color: white;
       }
+
+      /* Effet particules */
+      body::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: repeating-linear-gradient(
+          45deg,
+          rgba(0, 255, 255, 0.05) 0,
+          rgba(0, 255, 255, 0.05) 2px,
+          transparent 2px,
+          transparent 6px
+        );
+        animation: moveGrid 12s linear infinite;
+      }
+
+      @keyframes moveGrid {
+        from { transform: translate(0, 0); }
+        to { transform: translate(-200px, -200px); }
+      }
+
+      /* --- TITRE --- */
+      h1 {
+        font-size: 50px;
+        margin-bottom: 40px;
+        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+        animation: pulseTitle 2s infinite alternate;
+      }
+
+      @keyframes pulseTitle {
+        from { text-shadow: 0 0 20px #00eaff; }
+        to { text-shadow: 0 0 40px #00eaff; }
+      }
+
+      /* --- BOUTONS NÉON --- */
+      button {
+        font-size: 24px;
+        padding: 18px 40px;
+        margin: 15px;
+        border-radius: 14px;
+        border: 2px solid #00eaff;
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        cursor: pointer;
+        transition: 0.2s ease;
+        box-shadow: 0 0 15px #00eaff;
+        backdrop-filter: blur(4px);
+      }
+
+      button:hover {
+        transform: scale(1.12);
+        box-shadow: 0 0 30px #00eaff;
+      }
+
       button:active {
         transform: scale(0.95);
+        box-shadow: 0 0 10px #00eaff;
       }
     </style>
   </head>
+
   <body>
+
     <h1>TapBox</h1>
 
     <!-- SONS -->
