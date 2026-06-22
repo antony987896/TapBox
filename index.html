@@ -27,7 +27,14 @@
   </head>
   <body>
     <h1>TapBox</h1>
-    <button onclick="alert('Bruh 😎')">Bruh</button>
-    <button onclick="alert('Victory Royale 🏆')">Fortnite</button>
+
+    <!-- SONS -->
+    <audio id="son1" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+    <audio id="son2" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+
+    <!-- BOUTONS -->
+    <button onclick="document.getElementById('son1').play()">Bruh</button>
+    <button onclick="document.getElementById('son2').play()">Victory Royale</button>
+
   </body>
 </html>
