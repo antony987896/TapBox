@@ -9,16 +9,13 @@
       /* --- FOND ANIMÉ COMPATIBLE iPHONE --- */
       body {
         margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 20px;
         background: linear-gradient(135deg, #000428, #004e92);
         animation: bgMove 10s infinite alternate;
         font-family: system-ui, sans-serif;
         color: white;
-        overflow: hidden;
+        overflow-y: auto; /* 🔥 Permet de scroller */
+        text-align: center;
       }
 
       @keyframes bgMove {
@@ -51,6 +48,8 @@
         cursor: pointer;
         transition: 0.2s ease;
         box-shadow: 0 0 15px #00eaff;
+        width: 80%;
+        max-width: 350px;
       }
 
       button:hover {
