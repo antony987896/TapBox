@@ -1,68 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>TapBox</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-      /* --- FOND ANIMÉ COMPATIBLE iPHONE --- */
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #000428, #004e92);
-        animation: bgMove 10s infinite alternate;
-        font-family: system-ui, sans-serif;
-        color: white;
-        overflow: hidden;
-      }
-
-      @keyframes bgMove {
-        0% { background-position: 0% 0%; }
-        100% { background-position: 100% 100%; }
-      }
-
-      /* --- TITRE --- */
-      h1 {
-        font-size: 50px;
-        margin-bottom: 40px;
-        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
-        animation: pulseTitle 2s infinite alternate;
-      }
-
-      @keyframes pulseTitle {
-        from { text-shadow: 0 0 20px #00eaff; }
-        to { text-shadow: 0 0 40px #00eaff; }
-      }
-
-      /* --- BOUTONS NÉON --- */
-      button {
-        font-size: 24px;
-        padding: 18px 40px;
-        margin: 15px;
-        border-radius: 14px;
-        border: 2px solid #00eaff;
-        background: rgba(0, 0, 0, 0.4);
-        color: white;
-        cursor: pointer;
-        transition: 0.2s ease;
-        box-shadow: 0 0 15px #00eaff;
-      }
-
-      button:hover {
-        transform: scale(1.12);
-        box-shadow: 0 0 30px #00eaff;
-      }
-
-      button:active {
-        transform: scale(0.95);
-        box-shadow: 0 0 10px #00eaff;
-      }
-    </style>
   </head>
 
   <body>
@@ -79,4 +15,3 @@
 
   </body>
 </html>
-
