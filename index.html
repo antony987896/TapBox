@@ -14,7 +14,7 @@
         animation: bgMove 10s infinite alternate;
         font-family: system-ui, sans-serif;
         color: white;
-        overflow-y: auto; /* 🔥 Permet de scroller */
+        overflow-y: auto;
         text-align: center;
       }
 
@@ -66,7 +66,7 @@
 
   <body>
 
-    <h1>TapBox</h1>
+    <h1 id="title">TapBox</h1>
 
     <!-- SONS -->
     <audio id="sonBruh" src="Bruh.mp3"></audio>
@@ -77,14 +77,39 @@
     <audio id="sonChat" src="Chat.mp3"></audio>
     <audio id="sonChien" src="Chien.mp3"></audio>
 
+    <!-- BOUTON LANGUE AVEC DRAPEAUX -->
+    <button onclick="toggleLang()" id="btnLang">🇫🇷 Français</button>
+
     <!-- BOUTONS -->
-    <button onclick="document.getElementById('sonBruh').play()">Bruh</button>
-    <button onclick="document.getElementById('sonVictory').play()">Victory Royale</button>
-    <button onclick="document.getElementById('sonOof').play()">Roblox OOF</button>
-    <button onclick="document.getElementById('sonEau').play()">Goutte d’eau</button>
-    <button onclick="document.getElementById('sonChevre').play()">Chèvre</button>
-    <button onclick="document.getElementById('sonChat').play()">Chat</button>
-    <button onclick="document.getElementById('sonChien').play()">Chien</button>
+    <button onclick="document.getElementById('sonBruh').play()" id="btnBruh">Bruh</button>
+    <button onclick="document.getElementById('sonVictory').play()" id="btnVictory">Victory Royale</button>
+    <button onclick="document.getElementById('sonOof').play()" id="btnOof">Roblox OOF</button>
+    <button onclick="document.getElementById('sonEau').play()" id="btnEau">Goutte d’eau</button>
+    <button onclick="document.getElementById('sonChevre').play()" id="btnChevre">Chèvre</button>
+    <button onclick="document.getElementById('sonChat').play()" id="btnChat">Chat</button>
+    <button onclick="document.getElementById('sonChien').play()" id="btnChien">Chien</button>
+
+    <script>
+      let french = true;
+
+      function toggleLang() {
+        french = !french;
+
+        if (french) {
+          document.getElementById("btnLang").innerText = "🇫🇷 Français";
+          document.getElementById("btnEau").innerText = "Goutte d’eau";
+          document.getElementById("btnChevre").innerText = "Chèvre";
+          document.getElementById("btnChat").innerText = "Chat";
+          document.getElementById("btnChien").innerText = "Chien";
+        } else {
+          document.getElementById("btnLang").innerText = "🇬🇧 English";
+          document.getElementById("btnEau").innerText = "Water Drop";
+          document.getElementById("btnChevre").innerText = "Goat";
+          document.getElementById("btnChat").innerText = "Cat";
+          document.getElementById("btnChien").innerText = "Dog";
+        }
+      }
+    </script>
 
   </body>
 </html>
